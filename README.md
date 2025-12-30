@@ -2,7 +2,7 @@
 
 <div align="center">
 
-## 🎨 智能角色与场景融合优化系统
+## 智能角色与场景融合优化系统
 
 通过AI驱动的前置处理技术，解决角色图与构图参考图在景别、视角、位姿上的不匹配问题
 
@@ -13,18 +13,18 @@
 
 </div>
 
-## ✨ 项目概述
+## 项目概述
 
 本项目实现了一个AI生图Agent，通过前置处理（扩图/裁切/透视变换）解决角色与构图参考图不匹配的问题。Agent通过四个阶段（Think-Action-Generate-Observation）实现智能的角色与场景融合。
 
-## 🚀 核心功能
+## 核心功能
 
 1. **Think阶段**：使用VLM分析构图参考图，提取景别、关键点、透视、位姿等结构化约束
 2. **Action阶段**：基于约束执行图像预处理（扩图、裁切、透视变换、语义特征隔离）
 3. **Generate阶段**：构造带权重的结构化Prompt进行生图
 4. **Observation阶段**：校验结果并实现重试机制
 
-## 🛠️ 技术架构
+## 技术架构
 
 - **后端**：FastAPI
 - **前端**：React + Vite
@@ -33,7 +33,7 @@
   - VLM (分析与推理): [VLM_MODEL_NAME]
   - Image Gen (渲染): [IMAGE_GEN_MODEL_NAME]
 
-## 📁 项目结构
+## 项目结构
 
 ```
 role_scene_fusion_agent/
@@ -117,7 +117,7 @@ npm run dev
 - `reference_image`: 构图参考图文件
 - `prompt`: 生成提示词（可选）
 
-## 🎯 功能特点
+## 功能特点
 
 - **智能分析**：自动提取参考图的景别、透视、位姿等信息
 - **图像预处理**：支持扩图、裁切、透视变换等操作
@@ -126,14 +126,11 @@ npm run dev
 - **用户交互**：提供直观的前端界面和处理日志
 - **Vercel适配**：提供专门适配Vercel部署的前端版本
 
-<<<<<<< HEAD
-## 🔐 环境配置
-## 📊 验证指标
->>>>>>> 357d80c97af72a391fe712103792950c4247ffb2
+## 环境配置
+## 验证指标
 
 需要在 `.env` 文件中配置以下环境变量：
 
-<<<<<<< HEAD
 ```
 VLM_MODEL=[your_vlm_model_name]
 IMAGE_GEN_MODEL=[your_image_gen_model_name]
@@ -141,24 +138,15 @@ BASE_URL=[your_api_base_url]
 API_KEY=[your_api_key_here]
 ```
 
-## 🤝 贡献
+## 贡献
 
 欢迎提交Issue和Pull Request来帮助改进这个项目！
 
-## 📄 许可证
+## 许可证
 
 本项目采用 MIT 许可证。
 
-## 🎯 使用场景
->>>>>>> 357d80c97af72a391fe712103792950c4247ffb2
-
-欢迎提交Issue和Pull Request来帮助改进这个项目！
-
-## 📄 许可证
-
-本项目采用 MIT 许可证。
-
-## 🎯 使用场景
+## 使用场景
 
 适用于AI生图中需要将特定角色置入特定构图的场景，有效解决景别、视角、位姿不匹配导致的融合问题。
 ## 📦 安装与运行
@@ -241,104 +229,6 @@ API_KEY=[your_api_key_here]
 ```
 
 ## 🤝 贡献
-
-欢迎提交Issue和Pull Request来帮助改进这个项目！
-
-## 📄 许可证
-
-本项目采用 MIT 许可证。
-
-## 🎯 使用场景
-
-适用于AI生图中需要将特定角色置入特定构图的场景，有效解决景别、视角、位姿不匹配导致的融合问题。
-=======
->>>>>>> 357d80c97af72a391fe712103792950c4247ffb2
-
-### 后端服务
-
-1. 安装依赖：
-```bash
-pip install -r requirements.txt
-```
-
-2. 启动后端服务：
-```bash
-uvicorn main:app --host 0.0.0.0 --port 8000
-```
-
-### 前端界面
-
-1. 进入前端目录：
-```bash
-cd frontend
-```
-
-2. 安装依赖：
-```bash
-npm install
-```
-
-3. 启动开发服务器：
-```bash
-npm run dev
-```
-
-### Vercel部署前端
-
-适用于部署到Vercel的前端版本：
-```bash
-cd vercel_frontend
-npm install
-npm run dev
-```
-
-## 🌐 API接口
-
-### POST /process
-处理角色图和参考图，生成融合图像。
-
-参数：
-- `character_image`: 角色图文件
-- `reference_image`: 构图参考图文件
-- `prompt`: 生成提示词（可选）
-
-## 🎯 功能特点
-
-- **智能分析**：自动提取参考图的景别、透视、位姿等信息
-- **图像预处理**：支持扩图、裁切、透视变换等操作
-- **语义隔离**：通过遮罩和权重控制避免特征混淆
-- **闭环校验**：验证生成结果并自动重试优化
-- **用户交互**：提供直观的前端界面和处理日志
-- **Vercel适配**：提供专门适配Vercel部署的前端版本
-
-<<<<<<< HEAD
-## 🔐 环境配置
-=======
-## 📊 验证指标
->>>>>>> 357d80c97af72a391fe712103792950c4247ffb2
-
-需要在 `.env` 文件中配置以下环境变量：
-
-<<<<<<< HEAD
-```
-VLM_MODEL=[your_vlm_model_name]
-IMAGE_GEN_MODEL=[your_image_gen_model_name]
-BASE_URL=[your_api_base_url]
-API_KEY=[your_api_key_here]
-```
-
-## 🤝 贡献
-
-欢迎提交Issue和Pull Request来帮助改进这个项目！
-
-## 📄 许可证
-
-本项目采用 MIT 许可证。
-
-## 🎯 使用场景
-=======
-## 🤝 贡献
->>>>>>> 357d80c97af72a391fe712103792950c4247ffb2
 
 欢迎提交Issue和Pull Request来帮助改进这个项目！
 
